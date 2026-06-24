@@ -1,0 +1,42 @@
+{
+  "name": "ccca",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "dev": "nodemon --watch src --ext ts --exec ts-node src/main.ts",
+    "prepare": "husky",
+    "commit": "cz",
+    "compose:up": "docker compose -f docker/docker-compose.yaml up -d",
+    "compose:down": "docker compose -f docker/docker-compose.yaml down -v"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "axios": "^1.18.1",
+    "express": "^5.2.1",
+    "jest": "^30.4.2",
+    "nodemon": "^3.1.14",
+    "pg-promise": "^12.6.2",
+    "ts-jest": "^29.4.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.1.0",
+    "@commitlint/config-conventional": "^21.1.0",
+    "@types/jest": "^30.0.0",
+    "commitizen": "^4.3.2",
+    "cz-conventional-changelog": "3.3.0",
+    "husky": "^9.1.7"
+  }
+}
